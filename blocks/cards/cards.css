@@ -3,13 +3,30 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
+  border: 1px solid #e4e4e4;
+  border-radius: 12px;
   background-color: var(--background-color);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgb(19 19 19 / 6%);
+}
+
+@media (width >= 600px) {
+  .cards > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (width >= 900px) {
+  .cards > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
 }
 
 .cards .cards-card-body {

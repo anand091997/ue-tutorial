@@ -1,6 +1,11 @@
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: 8px 32px;
+}
+
+.columns > div + div {
+  margin-top: 32px;
 }
 
 .columns img {
@@ -21,9 +26,13 @@
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
+    align-items: flex-start;
     flex-direction: unset;
-    gap: 24px;
+    gap: 32px 48px;
+  }
+
+  .columns > div + div {
+    margin-top: 40px;
   }
 
   .columns > div > div {
